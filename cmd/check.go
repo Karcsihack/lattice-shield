@@ -38,10 +38,10 @@ func runCheck(cmd *cobra.Command, args []string) error {
 
 	bold.Println("\n  ╔══════════════════════════════════════════╗")
 	bold.Println("  ║   Lattice-Shield — Pre-Commit Check      ║")
-	bold.Println("  ╚══════════════════════════════════════════╝\n")
+	bold.Println("  ╚══════════════════════════════════════════╝")
 
 	if len(args) == 0 {
-		yellow.Println("  No staged files provided — nothing to check.\n")
+		yellow.Println("  No staged files provided — nothing to check.")
 		return nil
 	}
 
@@ -76,12 +76,12 @@ func runCheck(cmd *cobra.Command, args []string) error {
 	fmt.Printf("  Scanned %d file(s). ", scannedFiles)
 
 	if totalFindings == 0 {
-		green.Println("All clear — commit allowed.\n")
+		green.Println("All clear — commit allowed.")
 		return nil
 	}
 
 	red.Printf("BLOCKED — %d secret(s) detected.\n", totalFindings)
-	fmt.Println("  Run 'lattice-shield anonymize <file>' to sanitize before committing.\n")
+	fmt.Println("  Run 'lattice-shield anonymize <file>' to sanitize before committing.")
 
 	if blockOnHighOrAbove && criticalOrHigh > 0 {
 		os.Exit(1)

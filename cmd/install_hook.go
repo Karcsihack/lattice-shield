@@ -83,7 +83,7 @@ func runInstallHook(_ *cobra.Command, _ []string) error {
 
 	green.Printf("\n  ✓ Pre-commit hook installed at %s\n\n", hookPath)
 	fmt.Println("  Every commit in this repository will now be scanned for secrets.")
-	fmt.Println("  Use 'git commit --no-verify' to bypass (strongly discouraged).\n")
+	fmt.Println("  Use 'git commit --no-verify' to bypass (strongly discouraged).")
 
 	return nil
 }

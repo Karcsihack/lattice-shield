@@ -67,7 +67,7 @@ func runAnonymize(cmd *cobra.Command, args []string) error {
 	}
 
 	if dryRun {
-		bold.Println("\n  Lattice-Shield — Anonymization Preview (dry-run)\n")
+		bold.Println("\n  Lattice-Shield — Anonymization Preview (dry-run)")
 		if len(replacements) == 0 {
 			green.Println("  No proprietary identifiers detected.")
 		} else {
