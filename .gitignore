@@ -1,0 +1,31 @@
+# Binaries
+lattice-shield
+lattice-shield.exe
+*.exe
+*.out
+
+# Build artifacts
+dist/
+bin/
+
+# Go
+vendor/
+go.sum
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test artifacts
+*.test
+coverage.out
+coverage.html
+
+# Config (may contain sensitive data — use lattice-shield.yaml.example as template)
+lattice-shield.yaml
